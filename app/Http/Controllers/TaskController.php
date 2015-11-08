@@ -41,6 +41,15 @@ class TaskController extends Controller {
 		] );
 	}
 
+	public function detail($id) {
+		$id = intval($id);
+		if ($id == 0) {
+			\abort(404);
+		}
+
+		var_dump($id);
+	}
+
 	/**
 	 * Create a new task.
 	 *

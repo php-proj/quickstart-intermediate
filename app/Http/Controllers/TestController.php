@@ -14,9 +14,8 @@ class TestController extends Controller
 	}
 
 	public function input() {
-		$url = action('TestController@input', ['b' => 123]);
-		var_dump( $url );
-		var_dump(Request::input());
+		$req = Request::input();die;
+		var_dump($req);
 	}
 
 	/**

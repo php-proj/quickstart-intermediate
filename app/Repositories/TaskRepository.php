@@ -2,8 +2,8 @@
 
 namespace App\Repositories;
 
-use App\User;
-use App\Task;
+use App\Model\User;
+use App\Model\Task;
 
 class TaskRepository
 {

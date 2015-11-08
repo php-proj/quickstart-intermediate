@@ -1,9 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
-use App\User;
 use Illuminate\Database\Eloquent\Model;
+
+use App\Model\User;
 
 class Task extends Model
 {

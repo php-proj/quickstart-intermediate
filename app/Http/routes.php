@@ -6,6 +6,7 @@ Route::get('/', function () {
 
 // Task Routes
 Route::get('/tasks', 'TaskController@index');
+Route::get('/task/{id}', 'TaskController@detail');
 Route::post('/task', 'TaskController@store');
 Route::delete('/task/{task}', 'TaskController@destroy');
 
