@@ -17,3 +17,7 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration Routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+// test
+Route::match(['get', 'post', 'put'], 'test/input', 'TestController@input');
+Route::resource('photo', 'PhotoController');
