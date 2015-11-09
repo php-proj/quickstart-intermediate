@@ -21,4 +21,7 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // test
 Route::match(['get', 'post', 'put'], 'test/input', 'TestController@input');
+Route::match(['get', 'post', 'put'], 'test/output', 'TestController@output');
+
+// photo
 Route::resource('photo', 'PhotoController');

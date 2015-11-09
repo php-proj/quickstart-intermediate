@@ -18,6 +18,11 @@ class TestController extends Controller
 		var_dump($req);
 	}
 
+	public function output() {
+		var_dump( \func_get_args() );
+		return __FUNCTION__;
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *

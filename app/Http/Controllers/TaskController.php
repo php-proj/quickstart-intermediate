@@ -44,7 +44,7 @@ class TaskController extends Controller {
 	public function detail($id) {
 		$id = intval($id);
 		if ($id == 0) {
-			\abort(404);
+			return redirect('test/output')->with('message', 'detail missing');
 		}
 
 		var_dump($id);
