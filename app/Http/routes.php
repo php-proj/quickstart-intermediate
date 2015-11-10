@@ -22,6 +22,18 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 // test
 Route::match(['get', 'post', 'put'], 'test/input', 'TestController@input');
 Route::match(['get', 'post', 'put'], 'test/output', 'TestController@output');
+Route::get('/test/json', function() {
+	//this route should returns json response
+	return ['foo', 'bar'];
+});
+
+// app
+Route::get('/app/env/name', function() {
+	return app()->environment();
+});
+Route::get('/app/env/{str}', function($str) {
+	return env($str);
+});
 
 // photo
 Route::resource('photo', 'PhotoController');
