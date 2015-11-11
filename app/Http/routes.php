@@ -26,6 +26,7 @@ Route::get('/test/json', function() {
 	//this route should returns json response
 	return ['foo', 'bar'];
 });
+Route::get('/test/cache/{key}', 'TestController@cache');
 
 // app
 Route::get('/app/env/name', function() {

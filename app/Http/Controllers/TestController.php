@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Cache;
 use Request;
 
 use App\Http\Requests;
@@ -20,6 +21,14 @@ class TestController extends Controller
 
 	public function output() {
 		var_dump( \func_get_args() );
+		return __FUNCTION__;
+	}
+
+	public function cache($key) {
+		var_dump([
+			'key' => $key,
+			'val' => Cache::get($key)
+		]);
 		return __FUNCTION__;
 	}
 
