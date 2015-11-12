@@ -30,6 +30,9 @@ Route::get('/test/cache/{key}', 'TestController@cache');
 Route::get('/test/tasks', 'TestController@tasks');
 Route::get('/test/task/{id}', 'TestController@task');
 
+Route::get('/user/{uid}/tasks', 'TestController@user_tasks');
+Route::get('/user/photo', 'TestController@photo');
+
 // app
 Route::get('/app/env/name', function() {
 	return app()->environment();

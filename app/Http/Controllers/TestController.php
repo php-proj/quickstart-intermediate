@@ -8,6 +8,8 @@ use Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Model\Task;
+use App\Model\User;
+use App\Model\Photo;
 
 class TestController extends Controller
 {
@@ -44,6 +46,26 @@ class TestController extends Controller
 		}
 		else {
 			var_dump($task[0]);
+		}
+	}
+
+	public function photo($photo_id) {
+		$photo = Photo::find($photo_id);
+		if (empty($photo)) {
+			abort(404);
+		}
+		else {
+			var_dump($photo);
+		}
+	}
+
+	public function user_tasks($uid) {
+		$user = User::find($uid);
+		if (empty($user)) {
+			abort(404);
+		}
+		else {
+			var_dump( $user->tasks );
 		}
 	}
 
