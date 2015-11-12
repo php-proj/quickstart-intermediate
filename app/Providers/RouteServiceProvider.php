@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Task;
+use App\Model\Task;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 

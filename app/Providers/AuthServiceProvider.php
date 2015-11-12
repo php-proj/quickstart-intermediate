@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Task;
+use App\Model\Task;
 use App\Policies\TaskPolicy;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;

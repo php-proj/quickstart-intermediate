@@ -1,7 +1,7 @@
 <?php
 
-use App\User;
-use App\Task;
+use App\Model\Task;
+use App\Model\User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;

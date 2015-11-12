@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Task;
+use App\Model\Task;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Repositories\TaskRepository;
@@ -41,14 +41,14 @@ class TaskController extends Controller {
 		] );
 	}
 
-	public function detail($id) {
-		$id = intval($id);
-		if ($id == 0) {
-			return redirect('test/output')->with('message', 'detail missing');
-		}
+// 	public function detail($id) {
+// 		$id = intval($id);
+// 		if ($id == 0) {
+// 			return redirect('test/output')->with('message', 'detail missing');
+// 		}
 
-		var_dump($id);
-	}
+// 		var_dump($id);
+// 	}
 
 	/**
 	 * Create a new task.
