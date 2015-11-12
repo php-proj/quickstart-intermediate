@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Cache;
 use Request;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Model\Task;
 
 class TestController extends Controller
 {
@@ -30,6 +31,20 @@ class TestController extends Controller
 			'val' => Cache::get($key)
 		]);
 		return __FUNCTION__;
+	}
+
+	public function tasks() {
+		var_dump( Task::first() );
+	}
+
+	public function task($id) {
+		$task = Task::where('id', $id)->get();
+		if (empty($task) || count($task)==0) {
+			abort(404);
+		}
+		else {
+			var_dump($task[0]);
+		}
 	}
 
 	/**

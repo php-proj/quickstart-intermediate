@@ -27,6 +27,8 @@ Route::get('/test/json', function() {
 	return ['foo', 'bar'];
 });
 Route::get('/test/cache/{key}', 'TestController@cache');
+Route::get('/test/tasks', 'TestController@tasks');
+Route::get('/test/task/{id}', 'TestController@task');
 
 // app
 Route::get('/app/env/name', function() {
